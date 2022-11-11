@@ -7,7 +7,7 @@ void RangeOfCoordinate(int numberOfPlane)
     else if( numberOfPlane == 2) range = "x = (-;0), y = (0;+)";
     else if( numberOfPlane == 3) range = "x = (-;0), y = (-;0)";
     else if(numberOfPlane == 4) range = "x = (0;+), y = (-;0)";
-    else range = "Не вверно введено знаение плоскости";
+    else range = "Не вверно введено знаение четверти";
     System.Console.WriteLine($"Диапазон координат в четветри {numberOfPlane}: {range}");
 }
 
