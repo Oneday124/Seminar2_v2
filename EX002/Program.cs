@@ -2,17 +2,18 @@
 
 void RangeOfCoordinate(int numberOfPlane)
 {
-    string range;
-    if (numberOfPlane == 1) range = "x = (0;+), y = (0;+)";
-    else if( numberOfPlane == 2) range = "x = (-;0), y = (0;+)";
-    else if( numberOfPlane == 3) range = "x = (-;0), y = (-;0)";
-    else if(numberOfPlane == 4) range = "x = (0;+), y = (-;0)";
-    else range = "Не вверно введено знаение четверти";
-    System.Console.WriteLine($"Диапазон координат в четветри {numberOfPlane}: {range}");
+    if( numberOfPlane == 1) Console.WriteLine("x = (0;+), y = (0;+)");
+    else if( numberOfPlane == 2) Console.WriteLine("x = (-;0), y = (0;+)");
+    else if( numberOfPlane == 3) Console.WriteLine("x = (-;0), y = (-;0)");
+    else if (numberOfPlane == 4) Console.WriteLine("x = (0;+), y = (-;0)");
+    else Console.WriteLine("Ошибка: Введенное значение находится за пределыми диапазона ");
 }
 
 System.Console.Write("Введите номер четверти: ");
 int numberOfPlane;
-int.TryParse(Console.ReadLine(), out numberOfPlane);
-
+while(!int.TryParse(Console.ReadLine(), out numberOfPlane))
+{
+    System.Console.WriteLine("Ошибка: Введен не верный тип данных");
+    break;
+}
 RangeOfCoordinate(numberOfPlane);
