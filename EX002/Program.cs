@@ -12,6 +12,7 @@ void RangeOfCoordinate(int numberOfPlane)
 }
 
 System.Console.Write("Введите номер четверти: ");
-int numberOfPlane = int.Parse(Console.ReadLine() ??"0");
+int numberOfPlane;
+int.TryParse(Console.ReadLine(), out numberOfPlane);
 
 RangeOfCoordinate(numberOfPlane);
