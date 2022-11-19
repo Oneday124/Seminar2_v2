@@ -38,7 +38,7 @@ bool CheckForPolindrom(int[] array)
 
 System.Console.WriteLine("Введите пятизначное число: ");
 int number = int.Parse(Console.ReadLine() ??"0");
-if(number < 99999 && number > -99999)
+if(number < 99999 && number > 0)
 {
     int [] array = new int [5];
 
